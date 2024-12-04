@@ -1,0 +1,259 @@
+/* Tổng thể */
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 20px;
+  background: linear-gradient(180deg, #ffebc4, #f9e4a7); /* Nền vàng nhẹ gradient */
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  background-color: #222; /* Màu đen chủ đạo */
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Nội dung chính */
+.content {
+  display: flex;
+  margin-top: 20px;
+  gap: 30px;
+}
+
+/* Sidebar */
+.layout {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #2c3e50, #3498db);
+  padding: 20px;
+  color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebarTitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.searchHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.searchContainer {
+  width: 100%;
+  max-width: 280px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  transition: all 0.2s ease;
+}
+
+.categoryList {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.categoryButton {
+
+  padding: 10px 15px;
+  text-align: left;
+  border: none;
+
+
+
+  background: none;
+  font-size: 14px;
+  cursor: pointer;
+
+
+
+  transition: all 0.2s ease;
+}
+
+.categoryButton:hover {
+
+
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.categoryButton.active {
+
+  font-weight: bold;
+
+
+
+  color: #333;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.productList .card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.productList .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.productList .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.productList .card h3 {
+  font-size: 18px;
+  margin: 15px 10px;
+  color: #222;
+  text-align: center;
+}
+
+.productList .card p {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.productList .card .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d32f2f; /* Màu đỏ từ chữ "SALE" */
+  text-align: center;
+}
+
+.productList .card button {
+  background-color: #222; /* Màu đen chủ đạo */
+  color: #ffc107;
+  border: none;
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.productList .card button:hover {
+  background-color: #ffc107; /* Đổi sang vàng khi hover */
+  color: #222;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  background-color: #222;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .productList {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productList {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+}
+
+.searchHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 15px;
+}
+
+.searchContainer {
+  width: 88%;
+  max-width: 280px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+  background-color: #fff;
+  border-color: #333;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.searchInput::placeholder {
+  color: #757575;
+  font-size: 15px;
+}
+
