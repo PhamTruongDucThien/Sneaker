@@ -33,8 +33,8 @@ const HomePage = () => {
           {categories.map(category => (
             <button
               key={category}
-              className={`${styles.categoryButton} ${selectedCategory === category ? styles.active : ''}`}
-              onClick={() => setSelectedCategory(category)}
+              className={selectedCategory === category ? styles.active : ''}
+              onClick={() => setSelectedCategory(category.toUpperCase())}
             >
               {category}
             </button>

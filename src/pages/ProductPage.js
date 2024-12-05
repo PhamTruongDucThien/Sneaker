@@ -10,14 +10,14 @@ const ProductPage = () => {
   const product = products.find(p => p.id === parseInt(id));
 
   if (!product) {
-    return <div className={styles.notFound}>Không tìm thấy sản phẩm</div>;
+    return <h2>Sản phẩm không tồn tại</h2>;
   }
 
   return (
     <div className={styles.productPage}>
       <div className={styles.productContainer}>
         <div className={styles.imageContainer}>
-          <img src={product.image} alt={product.name} className={styles.productImage} />
+          <img src={`${process.env.PUBLIC_URL}/${product.image}`} alt={product.name} className={styles.productImage} />
         </div>
         <div className={styles.productInfo}>
           <h1 className={styles.productName}>{product.name}</h1>

@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className={styles.card} onClick={handleCardClick}>
-      <img src={product.image} alt={product.name} className={styles.image} />
+      <img src={`${process.env.PUBLIC_URL}/${product.image}`} alt={product.name} className={styles.image} />
       <h3 className={styles.title}>{product.name}</h3>
       <p className={styles.price}>{product.price} USD</p>
     </div>
