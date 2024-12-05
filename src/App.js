@@ -26,7 +26,7 @@ const StyledNavBar = styled.nav`
 const App = () => {
   return (
     <CartProvider>
-      <Router basename="/PhamTruongDucThienSneaker">
+      <Router basename="/Sneaker">
         <StyledNavBar>
           <Link to="/">Trang chủ</Link>
           <Link to="/cart">Giỏ hàng</Link>
