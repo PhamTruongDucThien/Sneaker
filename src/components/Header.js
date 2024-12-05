@@ -19,7 +19,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
         />
       </div>
 
-      <Link to="/cart" className={styles.cartLink}>
+      <Link to="/cart" className={styles.linkgiohang} >
         Giỏ hàng
       </Link>
     </header>
